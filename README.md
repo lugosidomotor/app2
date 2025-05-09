@@ -55,5 +55,3 @@ The workflow uses the following secrets:
 The workflow assumes the following file structure:
 - Dockerfile in the root directory
 - Kubernetes configuration files in the `config` directory
-
-The workflow will build the Docker image, push it to Docker Hub, update the relevant Kubernetes configuration file, and commit the changes back to the repository.
