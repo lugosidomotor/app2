@@ -1,13 +1,15 @@
-# 🔗 Related Repos
-
-
 # 🔄 Continuous Integration (CI) Workflow
-
-This README describes the CI workflow defined in the GitHub Actions YAML file.
 
 ## Overview
 
 This CI workflow automates the process of building, tagging, and pushing Docker images, as well as updating Kubernetes configuration files with the new image tag. It can be triggered manually for specific environments or automatically on pushes to the main branch.
+
+## Usage
+
+- For manual triggers, select the desired environment from the workflow dispatch menu.
+- For automatic triggers, simply push to the `main` branch.
+
+The workflow will build the Docker image, push it to Docker Hub, update the relevant Kubernetes configuration file, and commit the changes back to the repository.
 
 ## Trigger Events
 
@@ -52,12 +54,6 @@ The workflow uses the following secrets:
 
 The workflow assumes the following file structure:
 - Dockerfile in the root directory
-- Environment-specific YAML files in subdirectories (e.g., `./dev/dev.yml`)
 - Kubernetes configuration files in the `config` directory
-
-## Usage
-
-- For manual triggers, select the desired environment from the workflow dispatch menu.
-- For automatic triggers, simply push to the `main` branch.
 
 The workflow will build the Docker image, push it to Docker Hub, update the relevant Kubernetes configuration file, and commit the changes back to the repository.
