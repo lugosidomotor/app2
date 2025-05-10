@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
         - name: app-2
-          image: ldomotor/app2:6da97ed
+          image: ldomotor/app2:8a38a6e
           ports:
             - containerPort: 8080
